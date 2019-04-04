@@ -1,19 +1,88 @@
   <template>
-		  <v-toolbar >
-      <v-toolbar-title class="headline text-uppercase">
-        <router-link>
-				<v-img src="require('../assets/logo.svg')" class="my-3" contain height="60" ></v-img>
-				</router-link>
-        <span>BRUNO</span>
-      </v-toolbar-title>
+  <div>
+ <div id="app" toolbar--fixed toolbar style="background: #c9c9c9;">
+   		  <v-toolbar fixed style="position:sticky; top:10px">
+      <a @click="goToXXX" class="d-flex ml-2">
+        <img src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-300.png" height="65px" width="65px">
+      </a>
+      <v-toolbar-title>Bruno</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn flat router:to="/contact" >
-        <span class="mr-2">Contact</span>
-        <v-icon>mdi-cellphone-iphone</v-icon>
-      </v-btn>
+      <!-- <v-toolbar-items class="primary" > -->
+        <v-btn flat router to="/skills" class="primary">SKILLs</v-btn>  
+      <!-- </v-toolbar-items> -->
     </v-toolbar>
+   
+ </div>
+
+
+</div>
 	</template>
+
+<script>
+export default {
+   data () {
+    return {
+      // page: 1
+    }
+  },
+  methods: {
+    // scrollToTop () {
+    //   let container = document.getElementById('scrolling-techniques')
+    //   container.scrollTop = 0 // not working
+      
+      // Below is working
+ //     let event = new CustomEvent('scroll', {})
+ //     container.pageYOffset = 0
+ //     setTimeout(() => {
+//        container.scrollTop = 0
+ //     })
+//      container.dispatchEvent(event)
+  //   },
+  //   changePage (page) {
+  //     this.page = page
+  //     let container = document.getElementById('scrolling-techniques')
+  //     let event = new CustomEvent('scroll', {})
+  //     container.pageYOffset = 0
+  //     setTimeout(() => {
+  //      container.scrollTop = 0
+  //     }, 200)
+  //     container.dispatchEvent(event)
+  //   }
+  // }
+
+}
+</script>
+
+
+
+  <style>
+  body, html{
+  /* overflow:hidden; */
+  background:#f9f9f9;
+}
+
+.main-container {
+  max-height: calc(100vh - 64px);
+  height:auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.content {
+  min-height:2280px; 
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.content.short{
+  min-height:0;
+}
+  </style>
+  
+
+
 
 
 	<script>  

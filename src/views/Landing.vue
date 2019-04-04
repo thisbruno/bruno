@@ -43,8 +43,7 @@
 }
 .v-icon {
   display: inline-flex;}
-
-
+  
 @keyframes rocking {
   0%,100% {transform: rotateZ(-10deg);}
   50%     {transform: rotateZ(10deg);}
