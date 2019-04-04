@@ -8,6 +8,9 @@ import '@mdi/font/css/materialdesignicons.css'
 import VueTyperPlugin from 'vue-typer'
 import Vuetify from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
 
 
 Vue.config.productionTip = false
