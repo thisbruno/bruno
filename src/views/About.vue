@@ -1,6 +1,5 @@
 <template>
 <v-app>
-	<!-- <Nav fixed style="position:sticky; top:10px" > -->
   <h2>About the first</h2> 
   <v-container>
   <v-layout row wrap text-xs-center justify-space-around >
@@ -110,9 +109,9 @@
 
 
           <!-- SKILLS -->
-    <v-layout justify-center class=" mt-3 cyan lighten-5 ">
+    <v-layout justify-center class=" mt-3 cyan lighten-5 skillset ">
       <v-flex xs10 text-xs-center  class=" pt-5">
-        <p>
+        <p class="primary--text headline font-weight-bold">
           Check out some of my skills. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusantium repellat, ducimus suscipit molestias sunt a quas maxime sapiente enim quos facilis veritatis laudantium, porro debitis aliquam. Quisquam, modi atque.
         </p>
       </v-flex>
@@ -268,4 +267,17 @@ import Nav from '../components/Nav.vue'
     },
   }
 </script>
+
+<style scoped>
+.skillset {
+    background: url("../assets/moon.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%; height: 30vh;
+    /* position: relative; */
+    background-attachment: fixed;
+
+}
+</style>
+
+
 

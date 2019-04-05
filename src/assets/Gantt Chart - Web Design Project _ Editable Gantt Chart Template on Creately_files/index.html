@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://app.creately.com/player/standard/src/index.html?playerId=xzx5jho1jc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Boson</title><!--<base href="/player/standard/src/">--><base href="."><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="https://app.creately.com/player/standard/src/favicon.ico"><link rel="stylsheet" href="https://app.creately.com/player/standard/src/loading.css" ;=""><style>body {
+          padding: 0;
+          margin: 0;
+      }
+
+      .bsn-spinner {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+      }
+
+      .bsn-spinner:before {
+          display: block;
+          width: 60px;
+          height: 60px;
+          border-top: 5px solid #e4e4e4;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-radius: 50%;
+          -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+          content: '';
+      }
+
+      .bsn-icon-bulb, .bsn-spinner {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+      }</style><link href="./styles.b302c0f90aeecf9a85c5.bundle.css" rel="stylesheet"><style>.std-app-canvas[_ngcontent-c0]{cursor:move}</style><style>@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fx-bg-transition[_ngcontent-c1]{transition:background-color .1s ease,background .1s ease}.tb-btn-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]{position:relative;color:#696969}.tb-btn-container[_ngcontent-c1]   .fx-button.fx-icon[_ngcontent-c1]:hover{background-color:hsla(0,0%,100%,.5)}.tb-btn-container[_ngcontent-c1]   .fx-button.fx-icon[_ngcontent-c1]:active{background-color:hsla(0,0%,100%,.8)}*[_ngcontent-c1]{margin:0;padding:0;border:0}h2[_ngcontent-c1]{font-size:18px}h2[_ngcontent-c1], h3[_ngcontent-c1]{font-weight:400}h3[_ngcontent-c1]{font-size:16px}.fx-center-all[_ngcontent-c1]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c1]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c1]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c1]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c1]{float:left;text-align:left}.fx-right[_ngcontent-c1]{float:right;text-align:right}.fx-center[_ngcontent-c1]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c1]{display:none}.fx-invisible[_ngcontent-c1]{visibility:hidden}.fx-round[_ngcontent-c1], .std-sh-panel-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]{border-radius:100%}.fx-floating[_ngcontent-c1]{position:absolute;z-index:1}.fx-padding[_ngcontent-c1]{padding:10px}.fx-margin[_ngcontent-c1]{margin:10px}.fx-margin-top-5[_ngcontent-c1]{margin-top:5px}.fx-margin-top-10[_ngcontent-c1]{margin-top:10px}.fx-padding-top-5[_ngcontent-c1]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c1]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c1]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c1]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c1]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c1]{padding-bottom:10px}.fx-no-padding[_ngcontent-c1]{padding:0}.fx-no-margin[_ngcontent-c1]{margin:0}.fx-no-float[_ngcontent-c1]{float:none}.fx-ellipsis[_ngcontent-c1]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c1], .fx-span-both[_ngcontent-c1]{height:100%;width:100%}.fx-span-width[_ngcontent-c1]{width:100%}.fx-span-height[_ngcontent-c1]{height:100%}.fx-cover[_ngcontent-c1]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c1]{top:0}.fx-fix-bottom[_ngcontent-c1]{bottom:0}.fx-fix-right[_ngcontent-c1]{right:0}.fx-fix-left[_ngcontent-c1]{left:0}.fx-fix-top-left[_ngcontent-c1]{top:0;left:0}.fx-fix-top-right[_ngcontent-c1]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c1]{overflow:hidden}button.extra-light-grey[_ngcontent-c1], div.extra-light-grey[_ngcontent-c1]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c1], h1.extra-light-grey[_ngcontent-c1], h2.extra-light-grey[_ngcontent-c1], h3.extra-light-grey[_ngcontent-c1], i.extra-light-grey[_ngcontent-c1], label.extra-light-grey[_ngcontent-c1], p.extra-light-grey[_ngcontent-c1], span.extra-light-grey[_ngcontent-c1]{color:#f2f2f2}button.light-grey[_ngcontent-c1], div.light-grey[_ngcontent-c1]{background-color:#e4e4e4}a.light-grey[_ngcontent-c1], h1.light-grey[_ngcontent-c1], h2.light-grey[_ngcontent-c1], h3.light-grey[_ngcontent-c1], i.light-grey[_ngcontent-c1], label.light-grey[_ngcontent-c1], p.light-grey[_ngcontent-c1], span.light-grey[_ngcontent-c1]{color:#e4e4e4}button.medium-grey[_ngcontent-c1], div.medium-grey[_ngcontent-c1]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c1], h1.medium-grey[_ngcontent-c1], h2.medium-grey[_ngcontent-c1], h3.medium-grey[_ngcontent-c1], i.medium-grey[_ngcontent-c1], label.medium-grey[_ngcontent-c1], p.medium-grey[_ngcontent-c1], span.medium-grey[_ngcontent-c1]{color:#d8d8d8}button.grey[_ngcontent-c1], div.grey[_ngcontent-c1]{background-color:#a09f9f}a.grey[_ngcontent-c1], h1.grey[_ngcontent-c1], h2.grey[_ngcontent-c1], h3.grey[_ngcontent-c1], i.grey[_ngcontent-c1], label.grey[_ngcontent-c1], p.grey[_ngcontent-c1], span.grey[_ngcontent-c1]{color:#a09f9f}button.dark-grey[_ngcontent-c1], div.dark-grey[_ngcontent-c1]{background-color:#696969}a.dark-grey[_ngcontent-c1], h1.dark-grey[_ngcontent-c1], h2.dark-grey[_ngcontent-c1], h3.dark-grey[_ngcontent-c1], i.dark-grey[_ngcontent-c1], label.dark-grey[_ngcontent-c1], p.dark-grey[_ngcontent-c1], span.dark-grey[_ngcontent-c1]{color:#696969}button.crimson[_ngcontent-c1], div.crimson[_ngcontent-c1]{background-color:#f05758}a.crimson[_ngcontent-c1], h1.crimson[_ngcontent-c1], h2.crimson[_ngcontent-c1], h3.crimson[_ngcontent-c1], i.crimson[_ngcontent-c1], label.crimson[_ngcontent-c1], p.crimson[_ngcontent-c1], span.crimson[_ngcontent-c1]{color:#f05758}button.black[_ngcontent-c1], div.black[_ngcontent-c1]{background-color:#141414}a.black[_ngcontent-c1], h1.black[_ngcontent-c1], h2.black[_ngcontent-c1], h3.black[_ngcontent-c1], i.black[_ngcontent-c1], label.black[_ngcontent-c1], p.black[_ngcontent-c1], span.black[_ngcontent-c1]{color:#141414}button.yellow[_ngcontent-c1], div.yellow[_ngcontent-c1]{background-color:#faa72d}a.yellow[_ngcontent-c1], h1.yellow[_ngcontent-c1], h2.yellow[_ngcontent-c1], h3.yellow[_ngcontent-c1], i.yellow[_ngcontent-c1], label.yellow[_ngcontent-c1], p.yellow[_ngcontent-c1], span.yellow[_ngcontent-c1]{color:#faa72d}button.light-yellow[_ngcontent-c1], div.light-yellow[_ngcontent-c1]{background-color:#fdc977}a.light-yellow[_ngcontent-c1], h1.light-yellow[_ngcontent-c1], h2.light-yellow[_ngcontent-c1], h3.light-yellow[_ngcontent-c1], i.light-yellow[_ngcontent-c1], label.light-yellow[_ngcontent-c1], p.light-yellow[_ngcontent-c1], span.light-yellow[_ngcontent-c1]{color:#fdc977}button.blue[_ngcontent-c1], div.blue[_ngcontent-c1]{background-color:#1a7bb9}a.blue[_ngcontent-c1], h1.blue[_ngcontent-c1], h2.blue[_ngcontent-c1], h3.blue[_ngcontent-c1], i.blue[_ngcontent-c1], label.blue[_ngcontent-c1], p.blue[_ngcontent-c1], span.blue[_ngcontent-c1]{color:#1a7bb9}button.green[_ngcontent-c1], div.green[_ngcontent-c1]{background-color:#6da067}a.green[_ngcontent-c1], h1.green[_ngcontent-c1], h2.green[_ngcontent-c1], h3.green[_ngcontent-c1], i.green[_ngcontent-c1], label.green[_ngcontent-c1], p.green[_ngcontent-c1], span.green[_ngcontent-c1]{color:#6da067}button.white[_ngcontent-c1], div.white[_ngcontent-c1]{background-color:#fff}a.white[_ngcontent-c1], h1.white[_ngcontent-c1], h2.white[_ngcontent-c1], h3.white[_ngcontent-c1], i.white[_ngcontent-c1], label.white[_ngcontent-c1], p.white[_ngcontent-c1], span.white[_ngcontent-c1]{color:#fff}button.facebook[_ngcontent-c1], div.facebook[_ngcontent-c1]{background-color:#324b7f}a.facebook[_ngcontent-c1], h1.facebook[_ngcontent-c1], h2.facebook[_ngcontent-c1], h3.facebook[_ngcontent-c1], i.facebook[_ngcontent-c1], label.facebook[_ngcontent-c1], p.facebook[_ngcontent-c1], span.facebook[_ngcontent-c1]{color:#324b7f}button.twitter[_ngcontent-c1], div.twitter[_ngcontent-c1]{background-color:#339dc3}a.twitter[_ngcontent-c1], h1.twitter[_ngcontent-c1], h2.twitter[_ngcontent-c1], h3.twitter[_ngcontent-c1], i.twitter[_ngcontent-c1], label.twitter[_ngcontent-c1], p.twitter[_ngcontent-c1], span.twitter[_ngcontent-c1]{color:#339dc3}button.google[_ngcontent-c1], div.google[_ngcontent-c1]{background-color:#dc4535}a.google[_ngcontent-c1], h1.google[_ngcontent-c1], h2.google[_ngcontent-c1], h3.google[_ngcontent-c1], i.google[_ngcontent-c1], label.google[_ngcontent-c1], p.google[_ngcontent-c1], span.google[_ngcontent-c1]{color:#dc4535}button.linkedin[_ngcontent-c1], div.linkedin[_ngcontent-c1]{background-color:#025a84}a.linkedin[_ngcontent-c1], h1.linkedin[_ngcontent-c1], h2.linkedin[_ngcontent-c1], h3.linkedin[_ngcontent-c1], i.linkedin[_ngcontent-c1], label.linkedin[_ngcontent-c1], p.linkedin[_ngcontent-c1], span.linkedin[_ngcontent-c1]{color:#025a84}.std-sh-panel-container[_ngcontent-c1]   .fx-button[_ngcontent-c1]   i[_ngcontent-c1]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c1]   label[_ngcontent-c1]{display:none}.std-sh-panel-container[_ngcontent-c1]   .ss-button-container[_ngcontent-c1]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c1]   .ss-button-container[_ngcontent-c1]:first-child{margin-left:0}.tb-container[_ngcontent-c1]{width:100%;height:40px;line-height:40px;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#e4e4e4;transition:opacity .1s ease,-webkit-transform .1s ease;transition:transform .1s ease,opacity .1s ease;transition:transform .1s ease,opacity .1s ease,-webkit-transform .1s ease;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);opacity:.5;z-index:4;transition-delay:.2s}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .tb-sliding-panel-children[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1] > *[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .tb-sliding-panel[_ngcontent-c1]:hover   .tb-sliding-panel-children[_ngcontent-c1] > [_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]   .tci-link-item[_ngcontent-c1] > *[_ngcontent-c1]{transition:opacity .3s ease}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1] > *[_ngcontent-c1]{opacity:.5}.tb-container[_ngcontent-c1]   .thumbnail-carousel-content[_ngcontent-c1]:hover   .tci-link-item[_ngcontent-c1] > [_ngcontent-c1]:hover{opacity:1}.tb-container[_ngcontent-c1]:hover{opacity:1;transition-delay:0s}.tb-button[_ngcontent-c1]{padding-left:5px;padding-right:5px}.tb-button[_ngcontent-c1]   i[_ngcontent-c1]{font-size:1.6rem}.tb-btn-container.center[_ngcontent-c1]{-moz-flex-grow:1;-ms-flex-grow:1;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.std-app-container[_ngcontent-c1]:hover   .tb-container[_ngcontent-c1]{-webkit-transform:translateZ(0);transform:translateZ(0)}.std-tb-btn-count[_ngcontent-c1]{font-size:12px;color:#696969;position:relative;top:2px;left:-2px}</style><style>@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fx-bg-transition[_ngcontent-c2]{transition:background-color .1s ease,background .1s ease}.tb-btn-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]{position:relative;color:#696969}.tb-btn-container[_ngcontent-c2]   .fx-button.fx-icon[_ngcontent-c2]:hover{background-color:hsla(0,0%,100%,.5)}.tb-btn-container[_ngcontent-c2]   .fx-button.fx-icon[_ngcontent-c2]:active{background-color:hsla(0,0%,100%,.8)}*[_ngcontent-c2]{margin:0;padding:0;border:0}h2[_ngcontent-c2]{font-size:18px}h2[_ngcontent-c2], h3[_ngcontent-c2]{font-weight:400}h3[_ngcontent-c2]{font-size:16px}.fx-center-all[_ngcontent-c2]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c2]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c2]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c2]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c2]{float:left;text-align:left}.fx-right[_ngcontent-c2]{float:right;text-align:right}.fx-center[_ngcontent-c2]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c2]{display:none}.fx-invisible[_ngcontent-c2]{visibility:hidden}.fx-round[_ngcontent-c2], .std-sh-panel-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]{border-radius:100%}.fx-floating[_ngcontent-c2]{position:absolute;z-index:1}.fx-padding[_ngcontent-c2]{padding:10px}.fx-margin[_ngcontent-c2]{margin:10px}.fx-margin-top-5[_ngcontent-c2]{margin-top:5px}.fx-margin-top-10[_ngcontent-c2]{margin-top:10px}.fx-padding-top-5[_ngcontent-c2]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c2]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c2]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c2]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c2]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c2]{padding-bottom:10px}.fx-no-padding[_ngcontent-c2]{padding:0}.fx-no-margin[_ngcontent-c2]{margin:0}.fx-no-float[_ngcontent-c2]{float:none}.fx-ellipsis[_ngcontent-c2]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c2], .fx-span-both[_ngcontent-c2]{height:100%;width:100%}.fx-span-width[_ngcontent-c2]{width:100%}.fx-span-height[_ngcontent-c2]{height:100%}.fx-cover[_ngcontent-c2]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c2]{top:0}.fx-fix-bottom[_ngcontent-c2]{bottom:0}.fx-fix-right[_ngcontent-c2]{right:0}.fx-fix-left[_ngcontent-c2]{left:0}.fx-fix-top-left[_ngcontent-c2]{top:0;left:0}.fx-fix-top-right[_ngcontent-c2]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c2]{overflow:hidden}button.extra-light-grey[_ngcontent-c2], div.extra-light-grey[_ngcontent-c2]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c2], h1.extra-light-grey[_ngcontent-c2], h2.extra-light-grey[_ngcontent-c2], h3.extra-light-grey[_ngcontent-c2], i.extra-light-grey[_ngcontent-c2], label.extra-light-grey[_ngcontent-c2], p.extra-light-grey[_ngcontent-c2], span.extra-light-grey[_ngcontent-c2]{color:#f2f2f2}button.light-grey[_ngcontent-c2], div.light-grey[_ngcontent-c2]{background-color:#e4e4e4}a.light-grey[_ngcontent-c2], h1.light-grey[_ngcontent-c2], h2.light-grey[_ngcontent-c2], h3.light-grey[_ngcontent-c2], i.light-grey[_ngcontent-c2], label.light-grey[_ngcontent-c2], p.light-grey[_ngcontent-c2], span.light-grey[_ngcontent-c2]{color:#e4e4e4}button.medium-grey[_ngcontent-c2], div.medium-grey[_ngcontent-c2]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c2], h1.medium-grey[_ngcontent-c2], h2.medium-grey[_ngcontent-c2], h3.medium-grey[_ngcontent-c2], i.medium-grey[_ngcontent-c2], label.medium-grey[_ngcontent-c2], p.medium-grey[_ngcontent-c2], span.medium-grey[_ngcontent-c2]{color:#d8d8d8}button.grey[_ngcontent-c2], div.grey[_ngcontent-c2]{background-color:#a09f9f}a.grey[_ngcontent-c2], h1.grey[_ngcontent-c2], h2.grey[_ngcontent-c2], h3.grey[_ngcontent-c2], i.grey[_ngcontent-c2], label.grey[_ngcontent-c2], p.grey[_ngcontent-c2], span.grey[_ngcontent-c2]{color:#a09f9f}button.dark-grey[_ngcontent-c2], div.dark-grey[_ngcontent-c2]{background-color:#696969}a.dark-grey[_ngcontent-c2], h1.dark-grey[_ngcontent-c2], h2.dark-grey[_ngcontent-c2], h3.dark-grey[_ngcontent-c2], i.dark-grey[_ngcontent-c2], label.dark-grey[_ngcontent-c2], p.dark-grey[_ngcontent-c2], span.dark-grey[_ngcontent-c2]{color:#696969}button.crimson[_ngcontent-c2], div.crimson[_ngcontent-c2]{background-color:#f05758}a.crimson[_ngcontent-c2], h1.crimson[_ngcontent-c2], h2.crimson[_ngcontent-c2], h3.crimson[_ngcontent-c2], i.crimson[_ngcontent-c2], label.crimson[_ngcontent-c2], p.crimson[_ngcontent-c2], span.crimson[_ngcontent-c2]{color:#f05758}button.black[_ngcontent-c2], div.black[_ngcontent-c2]{background-color:#141414}a.black[_ngcontent-c2], h1.black[_ngcontent-c2], h2.black[_ngcontent-c2], h3.black[_ngcontent-c2], i.black[_ngcontent-c2], label.black[_ngcontent-c2], p.black[_ngcontent-c2], span.black[_ngcontent-c2]{color:#141414}button.yellow[_ngcontent-c2], div.yellow[_ngcontent-c2]{background-color:#faa72d}a.yellow[_ngcontent-c2], h1.yellow[_ngcontent-c2], h2.yellow[_ngcontent-c2], h3.yellow[_ngcontent-c2], i.yellow[_ngcontent-c2], label.yellow[_ngcontent-c2], p.yellow[_ngcontent-c2], span.yellow[_ngcontent-c2]{color:#faa72d}button.light-yellow[_ngcontent-c2], div.light-yellow[_ngcontent-c2]{background-color:#fdc977}a.light-yellow[_ngcontent-c2], h1.light-yellow[_ngcontent-c2], h2.light-yellow[_ngcontent-c2], h3.light-yellow[_ngcontent-c2], i.light-yellow[_ngcontent-c2], label.light-yellow[_ngcontent-c2], p.light-yellow[_ngcontent-c2], span.light-yellow[_ngcontent-c2]{color:#fdc977}button.blue[_ngcontent-c2], div.blue[_ngcontent-c2]{background-color:#1a7bb9}a.blue[_ngcontent-c2], h1.blue[_ngcontent-c2], h2.blue[_ngcontent-c2], h3.blue[_ngcontent-c2], i.blue[_ngcontent-c2], label.blue[_ngcontent-c2], p.blue[_ngcontent-c2], span.blue[_ngcontent-c2]{color:#1a7bb9}button.green[_ngcontent-c2], div.green[_ngcontent-c2]{background-color:#6da067}a.green[_ngcontent-c2], h1.green[_ngcontent-c2], h2.green[_ngcontent-c2], h3.green[_ngcontent-c2], i.green[_ngcontent-c2], label.green[_ngcontent-c2], p.green[_ngcontent-c2], span.green[_ngcontent-c2]{color:#6da067}button.white[_ngcontent-c2], div.white[_ngcontent-c2]{background-color:#fff}a.white[_ngcontent-c2], h1.white[_ngcontent-c2], h2.white[_ngcontent-c2], h3.white[_ngcontent-c2], i.white[_ngcontent-c2], label.white[_ngcontent-c2], p.white[_ngcontent-c2], span.white[_ngcontent-c2]{color:#fff}button.facebook[_ngcontent-c2], div.facebook[_ngcontent-c2]{background-color:#324b7f}a.facebook[_ngcontent-c2], h1.facebook[_ngcontent-c2], h2.facebook[_ngcontent-c2], h3.facebook[_ngcontent-c2], i.facebook[_ngcontent-c2], label.facebook[_ngcontent-c2], p.facebook[_ngcontent-c2], span.facebook[_ngcontent-c2]{color:#324b7f}button.twitter[_ngcontent-c2], div.twitter[_ngcontent-c2]{background-color:#339dc3}a.twitter[_ngcontent-c2], h1.twitter[_ngcontent-c2], h2.twitter[_ngcontent-c2], h3.twitter[_ngcontent-c2], i.twitter[_ngcontent-c2], label.twitter[_ngcontent-c2], p.twitter[_ngcontent-c2], span.twitter[_ngcontent-c2]{color:#339dc3}button.google[_ngcontent-c2], div.google[_ngcontent-c2]{background-color:#dc4535}a.google[_ngcontent-c2], h1.google[_ngcontent-c2], h2.google[_ngcontent-c2], h3.google[_ngcontent-c2], i.google[_ngcontent-c2], label.google[_ngcontent-c2], p.google[_ngcontent-c2], span.google[_ngcontent-c2]{color:#dc4535}button.linkedin[_ngcontent-c2], div.linkedin[_ngcontent-c2]{background-color:#025a84}a.linkedin[_ngcontent-c2], h1.linkedin[_ngcontent-c2], h2.linkedin[_ngcontent-c2], h3.linkedin[_ngcontent-c2], i.linkedin[_ngcontent-c2], label.linkedin[_ngcontent-c2], p.linkedin[_ngcontent-c2], span.linkedin[_ngcontent-c2]{color:#025a84}.std-sh-panel-container[_ngcontent-c2]   .fx-button[_ngcontent-c2]   i[_ngcontent-c2]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c2]   label[_ngcontent-c2]{display:none}.std-sh-panel-container[_ngcontent-c2]   .ss-button-container[_ngcontent-c2]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c2]   .ss-button-container[_ngcontent-c2]:first-child{margin-left:0}.tb-container[_ngcontent-c2]{width:100%;height:40px;line-height:40px;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#e4e4e4;transition:opacity .1s ease,-webkit-transform .1s ease;transition:transform .1s ease,opacity .1s ease;transition:transform .1s ease,opacity .1s ease,-webkit-transform .1s ease;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);opacity:.5;z-index:4;transition-delay:.2s}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .tb-sliding-panel-children[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2] > *[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .tb-sliding-panel[_ngcontent-c2]:hover   .tb-sliding-panel-children[_ngcontent-c2] > [_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]   .tci-link-item[_ngcontent-c2] > *[_ngcontent-c2]{transition:opacity .3s ease}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2] > *[_ngcontent-c2]{opacity:.5}.tb-container[_ngcontent-c2]   .thumbnail-carousel-content[_ngcontent-c2]:hover   .tci-link-item[_ngcontent-c2] > [_ngcontent-c2]:hover{opacity:1}.tb-container[_ngcontent-c2]:hover{opacity:1;transition-delay:0s}.tb-button[_ngcontent-c2]{padding-left:5px;padding-right:5px}.tb-button[_ngcontent-c2]   i[_ngcontent-c2]{font-size:1.6rem}.tb-btn-container.center[_ngcontent-c2]{-moz-flex-grow:1;-ms-flex-grow:1;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.std-app-container[_ngcontent-c2]:hover   .tb-container[_ngcontent-c2]{-webkit-transform:translateZ(0);transform:translateZ(0)}.std-tb-btn-count[_ngcontent-c2]{font-size:12px;color:#696969;position:relative;top:2px;left:-2px}</style><style>*[_ngcontent-c3]{margin:0;padding:0;border:0}h2[_ngcontent-c3]{font-size:18px}h2[_ngcontent-c3], h3[_ngcontent-c3]{font-weight:400}h3[_ngcontent-c3]{font-size:16px}.fx-center-all[_ngcontent-c3]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-justify-content:center;-ms-justify-content:center;-webkit-box-pack:center;justify-content:center;-ms-flex-pack:center;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-horizontal-without-flex[_ngcontent-c3]{top:0;left:0;right:0;margin:0 auto;position:absolute}.fx-center-vertical[_ngcontent-c3]{display:-webkit-box;display:-ms-flexbox;display:flex;-moz-flex-direction:row;-ms-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-moz-align-items:center;-ms-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fx-center-without-flex[_ngcontent-c3]{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%;position:absolute}.fx-left[_ngcontent-c3]{float:left;text-align:left}.fx-right[_ngcontent-c3]{float:right;text-align:right}.fx-center[_ngcontent-c3]{margin:0 auto;text-align:center}.fx-hidden[_ngcontent-c3]{display:none}.fx-invisible[_ngcontent-c3]{visibility:hidden}.fx-round[_ngcontent-c3], .std-sh-panel-container[_ngcontent-c3]   .fx-button[_ngcontent-c3]{border-radius:100%}.fx-floating[_ngcontent-c3]{position:absolute;z-index:1}.fx-padding[_ngcontent-c3]{padding:10px}.fx-margin[_ngcontent-c3]{margin:10px}.fx-margin-top-5[_ngcontent-c3]{margin-top:5px}.fx-margin-top-10[_ngcontent-c3]{margin-top:10px}.fx-padding-top-5[_ngcontent-c3]{padding-top:5px}.fx-margin-bottom-5[_ngcontent-c3]{margin-bottom:5px}.fx-margin-bottom-10[_ngcontent-c3]{margin-bottom:10px}.fx-margin-bottom-20[_ngcontent-c3]{margin-bottom:20px}.fx-padding-bottom-5[_ngcontent-c3]{padding-bottom:5px}.fx-padding-bottom-10[_ngcontent-c3]{padding-bottom:10px}.fx-no-padding[_ngcontent-c3]{padding:0}.fx-no-margin[_ngcontent-c3]{margin:0}.fx-no-float[_ngcontent-c3]{float:none}.fx-ellipsis[_ngcontent-c3]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fx-cover[_ngcontent-c3], .fx-span-both[_ngcontent-c3]{height:100%;width:100%}.fx-span-width[_ngcontent-c3]{width:100%}.fx-span-height[_ngcontent-c3]{height:100%}.fx-cover[_ngcontent-c3]{position:absolute;overflow:hidden}.fx-fix-top[_ngcontent-c3]{top:0}.fx-fix-bottom[_ngcontent-c3]{bottom:0}.fx-fix-right[_ngcontent-c3]{right:0}.fx-fix-left[_ngcontent-c3]{left:0}.fx-fix-top-left[_ngcontent-c3]{top:0;left:0}.fx-fix-top-right[_ngcontent-c3]{top:0;right:0}.fx-overflow-hidden[_ngcontent-c3]{overflow:hidden}button.extra-light-grey[_ngcontent-c3], div.extra-light-grey[_ngcontent-c3]{background-color:#f2f2f2}a.extra-light-grey[_ngcontent-c3], h1.extra-light-grey[_ngcontent-c3], h2.extra-light-grey[_ngcontent-c3], h3.extra-light-grey[_ngcontent-c3], i.extra-light-grey[_ngcontent-c3], label.extra-light-grey[_ngcontent-c3], p.extra-light-grey[_ngcontent-c3], span.extra-light-grey[_ngcontent-c3]{color:#f2f2f2}button.light-grey[_ngcontent-c3], div.light-grey[_ngcontent-c3]{background-color:#e4e4e4}a.light-grey[_ngcontent-c3], h1.light-grey[_ngcontent-c3], h2.light-grey[_ngcontent-c3], h3.light-grey[_ngcontent-c3], i.light-grey[_ngcontent-c3], label.light-grey[_ngcontent-c3], p.light-grey[_ngcontent-c3], span.light-grey[_ngcontent-c3]{color:#e4e4e4}button.medium-grey[_ngcontent-c3], div.medium-grey[_ngcontent-c3]{background-color:#d8d8d8}a.medium-grey[_ngcontent-c3], h1.medium-grey[_ngcontent-c3], h2.medium-grey[_ngcontent-c3], h3.medium-grey[_ngcontent-c3], i.medium-grey[_ngcontent-c3], label.medium-grey[_ngcontent-c3], p.medium-grey[_ngcontent-c3], span.medium-grey[_ngcontent-c3]{color:#d8d8d8}button.grey[_ngcontent-c3], div.grey[_ngcontent-c3]{background-color:#a09f9f}a.grey[_ngcontent-c3], h1.grey[_ngcontent-c3], h2.grey[_ngcontent-c3], h3.grey[_ngcontent-c3], i.grey[_ngcontent-c3], label.grey[_ngcontent-c3], p.grey[_ngcontent-c3], span.grey[_ngcontent-c3]{color:#a09f9f}button.dark-grey[_ngcontent-c3], div.dark-grey[_ngcontent-c3]{background-color:#696969}a.dark-grey[_ngcontent-c3], h1.dark-grey[_ngcontent-c3], h2.dark-grey[_ngcontent-c3], h3.dark-grey[_ngcontent-c3], i.dark-grey[_ngcontent-c3], label.dark-grey[_ngcontent-c3], p.dark-grey[_ngcontent-c3], span.dark-grey[_ngcontent-c3]{color:#696969}button.crimson[_ngcontent-c3], div.crimson[_ngcontent-c3]{background-color:#f05758}a.crimson[_ngcontent-c3], h1.crimson[_ngcontent-c3], h2.crimson[_ngcontent-c3], h3.crimson[_ngcontent-c3], i.crimson[_ngcontent-c3], label.crimson[_ngcontent-c3], p.crimson[_ngcontent-c3], span.crimson[_ngcontent-c3]{color:#f05758}button.black[_ngcontent-c3], div.black[_ngcontent-c3]{background-color:#141414}a.black[_ngcontent-c3], h1.black[_ngcontent-c3], h2.black[_ngcontent-c3], h3.black[_ngcontent-c3], i.black[_ngcontent-c3], label.black[_ngcontent-c3], p.black[_ngcontent-c3], span.black[_ngcontent-c3]{color:#141414}button.yellow[_ngcontent-c3], div.yellow[_ngcontent-c3]{background-color:#faa72d}a.yellow[_ngcontent-c3], h1.yellow[_ngcontent-c3], h2.yellow[_ngcontent-c3], h3.yellow[_ngcontent-c3], i.yellow[_ngcontent-c3], label.yellow[_ngcontent-c3], p.yellow[_ngcontent-c3], span.yellow[_ngcontent-c3]{color:#faa72d}button.light-yellow[_ngcontent-c3], div.light-yellow[_ngcontent-c3]{background-color:#fdc977}a.light-yellow[_ngcontent-c3], h1.light-yellow[_ngcontent-c3], h2.light-yellow[_ngcontent-c3], h3.light-yellow[_ngcontent-c3], i.light-yellow[_ngcontent-c3], label.light-yellow[_ngcontent-c3], p.light-yellow[_ngcontent-c3], span.light-yellow[_ngcontent-c3]{color:#fdc977}button.blue[_ngcontent-c3], div.blue[_ngcontent-c3]{background-color:#1a7bb9}a.blue[_ngcontent-c3], h1.blue[_ngcontent-c3], h2.blue[_ngcontent-c3], h3.blue[_ngcontent-c3], i.blue[_ngcontent-c3], label.blue[_ngcontent-c3], p.blue[_ngcontent-c3], span.blue[_ngcontent-c3]{color:#1a7bb9}button.green[_ngcontent-c3], div.green[_ngcontent-c3]{background-color:#6da067}a.green[_ngcontent-c3], h1.green[_ngcontent-c3], h2.green[_ngcontent-c3], h3.green[_ngcontent-c3], i.green[_ngcontent-c3], label.green[_ngcontent-c3], p.green[_ngcontent-c3], span.green[_ngcontent-c3]{color:#6da067}button.white[_ngcontent-c3], div.white[_ngcontent-c3]{background-color:#fff}a.white[_ngcontent-c3], h1.white[_ngcontent-c3], h2.white[_ngcontent-c3], h3.white[_ngcontent-c3], i.white[_ngcontent-c3], label.white[_ngcontent-c3], p.white[_ngcontent-c3], span.white[_ngcontent-c3]{color:#fff}button.facebook[_ngcontent-c3], div.facebook[_ngcontent-c3]{background-color:#324b7f}a.facebook[_ngcontent-c3], h1.facebook[_ngcontent-c3], h2.facebook[_ngcontent-c3], h3.facebook[_ngcontent-c3], i.facebook[_ngcontent-c3], label.facebook[_ngcontent-c3], p.facebook[_ngcontent-c3], span.facebook[_ngcontent-c3]{color:#324b7f}button.twitter[_ngcontent-c3], div.twitter[_ngcontent-c3]{background-color:#339dc3}a.twitter[_ngcontent-c3], h1.twitter[_ngcontent-c3], h2.twitter[_ngcontent-c3], h3.twitter[_ngcontent-c3], i.twitter[_ngcontent-c3], label.twitter[_ngcontent-c3], p.twitter[_ngcontent-c3], span.twitter[_ngcontent-c3]{color:#339dc3}button.google[_ngcontent-c3], div.google[_ngcontent-c3]{background-color:#dc4535}a.google[_ngcontent-c3], h1.google[_ngcontent-c3], h2.google[_ngcontent-c3], h3.google[_ngcontent-c3], i.google[_ngcontent-c3], label.google[_ngcontent-c3], p.google[_ngcontent-c3], span.google[_ngcontent-c3]{color:#dc4535}button.linkedin[_ngcontent-c3], div.linkedin[_ngcontent-c3]{background-color:#025a84}a.linkedin[_ngcontent-c3], h1.linkedin[_ngcontent-c3], h2.linkedin[_ngcontent-c3], h3.linkedin[_ngcontent-c3], i.linkedin[_ngcontent-c3], label.linkedin[_ngcontent-c3], p.linkedin[_ngcontent-c3], span.linkedin[_ngcontent-c3]{color:#025a84}.std-sh-panel-container[_ngcontent-c3]   .fx-button[_ngcontent-c3]   i[_ngcontent-c3]{font-size:22px;color:#fff}.std-sh-panel-container[_ngcontent-c3]   label[_ngcontent-c3]{display:none}.std-sh-panel-container[_ngcontent-c3]   .ss-button-container[_ngcontent-c3]{display:inline-block;margin-left:20px}.std-sh-panel-container[_ngcontent-c3]   .ss-button-container[_ngcontent-c3]:first-child{margin-left:0}</style></head><body><app-root _nghost-c0="" ng-version="4.3.6"><div _ngcontent-c0="" class="std-app-container fx-cover">
+    
+    <!---->
+
+    <view-stack _ngcontent-c0="" buttonicon="boson-icon-back" buttonposition="fx-left"><div></div><std-diagram-viewer><div class="fx-cover" style="transform: translateX(0); transition: transform 300ms ease-out;">
+    <div class="fx-cover" style="background-color: rgb(255, 255, 255);">
+        <loading-indicator classstring="fx-center-all fx-cover fx-large" spinnerclass="fx-icon boson-icon-bulb"><div class="fx-center-all fx-cover fx-large">
+                    <!----></div></loading-indicator>
+
+        <!---->
+        
+        <!----><div class="">
+            <click-area class="fx-cover"><div class="interactive-area" wheelscroll="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        </div></click-area>
+
+            <diagram-canvas class="std-app-canvas fx-cover fx-center-all" style="background-color: rgb(255, 255, 255);"><div class="fx-fix-top-left fx-cover diagram-svg-container"><div style="-webkit-transform: matrix(0.6334,0,0,0.6334,-123.6938,48.498) ;-moz-transform: matrix(0.6334,0,0,0.6334,-123.6938,48.498) ;-ms-transform: matrix(0.6334,0,0,0.6334,-123.6938,48.498) ;-o-transform: matrix(0.6334,0,0,0.6334,-123.6938,48.498) ;transform: matrix(0.6334,0,0,0.6334,-123.6938,48.498) ;-webkit-transform-origin: top left;-moz-transform-origin: top left;-ms-transform-origin: top left;-o-transform-origin: top left;-transform-origin: top left;transform-origin: top left;"><svg version="1.1" x="0" y="0" id="hndfy4s91" diagram-revision="0" width="1870" height="710.5" xmlns="http://www.w3.org/2000/svg" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xlink="http://www.w3.org/1999/xlink" style="background-color: transparent;"><g>
+  <g id="hndfy4s9-ko10" transform="translate(5,5)">
+    <desc>root/gantt/chartContainer?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="1" width="259" height="678" fill="#ffffff" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="1" width="1858" height="38" fill="#ffffff" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="260" y="39" width="1599" height="640" fill="#ffffff" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <path d="M 200 1 L 200 678 M 260 1 L 260 678 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 260 678 L 280 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 280 20 L 280 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 280 39 L 300 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 300 20 L 300 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 300 39 L 320 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 320 20 L 320 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 320 39 L 340 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 340 20 L 340 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 360 1 L 360 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 360 39 L 360 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 360 39 L 380 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 380 20 L 380 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 380 39 L 400 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 400 20 L 400 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 400 39 L 420 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 420 20 L 420 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 420 39 L 440 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 440 20 L 440 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 460 1 L 460 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 460 39 L 460 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 460 39 L 480 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 480 20 L 480 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 480 39 L 500 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 500 20 L 500 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 500 39 L 520 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 520 20 L 520 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 520 39 L 540 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 540 20 L 540 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 560 1 L 560 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 560 39 L 560 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 560 39 L 580 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 580 20 L 580 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 580 39 L 600 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 600 20 L 600 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 600 39 L 620 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 620 20 L 620 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 620 39 L 640 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 640 20 L 640 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 660 1 L 660 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 660 39 L 660 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 660 39 L 680 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 680 20 L 680 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 680 39 L 700 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 700 20 L 700 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 700 39 L 720 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 720 20 L 720 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 720 39 L 740 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 740 20 L 740 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 760 1 L 760 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 760 39 L 760 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 760 39 L 780 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 780 20 L 780 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 780 39 L 800 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 800 20 L 800 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 800 39 L 820 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 820 20 L 820 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 820 39 L 840 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 840 20 L 840 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 860 1 L 860 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 860 39 L 860 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 860 39 L 880 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 880 20 L 880 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 880 39 L 900 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 900 20 L 900 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 900 39 L 920 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 920 20 L 920 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 920 39 L 940 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 940 20 L 940 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 960 1 L 960 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 960 39 L 960 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 960 39 L 980 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 980 20 L 980 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 980 39 L 1000 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1000 20 L 1000 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1000 39 L 1020 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1020 20 L 1020 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1020 39 L 1040 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1040 20 L 1040 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1060 1 L 1060 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1060 39 L 1060 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1060 39 L 1080 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1080 20 L 1080 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1080 39 L 1100 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1100 20 L 1100 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1100 39 L 1120 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1120 20 L 1120 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1120 39 L 1140 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1140 20 L 1140 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1160 1 L 1160 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1160 39 L 1160 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1160 39 L 1180 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1180 20 L 1180 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1180 39 L 1200 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1200 20 L 1200 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1200 39 L 1220 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1220 20 L 1220 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1220 39 L 1240 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1240 20 L 1240 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1260 1 L 1260 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1260 39 L 1260 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1260 39 L 1280 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1280 20 L 1280 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1280 39 L 1300 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1300 20 L 1300 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1300 39 L 1320 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1320 20 L 1320 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1320 39 L 1340 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1340 20 L 1340 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1360 1 L 1360 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1360 39 L 1360 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1360 39 L 1380 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1380 20 L 1380 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1380 39 L 1400 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1400 20 L 1400 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1400 39 L 1420 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1420 20 L 1420 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1420 39 L 1440 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1440 20 L 1440 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1460 1 L 1460 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1460 39 L 1460 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1460 39 L 1480 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1480 20 L 1480 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1480 39 L 1500 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1500 20 L 1500 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1500 39 L 1520 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1520 20 L 1520 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1520 39 L 1540 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1540 20 L 1540 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1560 1 L 1560 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1560 39 L 1560 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1560 39 L 1580 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1580 20 L 1580 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1580 39 L 1600 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1600 20 L 1600 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1600 39 L 1620 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1620 20 L 1620 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1620 39 L 1640 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1640 20 L 1640 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1660 1 L 1660 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1660 39 L 1660 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1660 39 L 1680 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1680 20 L 1680 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1680 39 L 1700 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1700 20 L 1700 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1700 39 L 1720 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1720 20 L 1720 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1720 39 L 1740 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1740 20 L 1740 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1760 1 L 1760 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1760 39 L 1760 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1760 39 L 1780 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1780 20 L 1780 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1780 39 L 1800 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1800 20 L 1800 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1800 39 L 1820 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1820 20 L 1820 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1820 39 L 1840 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-opacity="0" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1840 20 L 1840 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1859 1 L 1859 39 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 1859 39 L 1860 39 " fill="none" stroke="#7c279b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"></path>
+        <path d="M 260 20 L 1858 20 " fill="none" stroke="#7c279b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+      </g>
+      <text x="0" y="0" width="102" height="19" transform="translate(5,12.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">Task Description</tspan>
+      </text>
+      <text x="0" y="0" width="56" height="19" transform="translate(205,12.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">Duration</tspan>
+      </text>
+      <text x="0" y="0" width="103" height="19" transform="translate(5,52.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">+ Getting Started</tspan>
+      </text>
+      <text x="0" y="0" width="68" height="19" transform="translate(15,92.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Analysis</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,92.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">5</tspan>
+      </text>
+      <text x="0" y="0" width="151" height="19" transform="translate(15,132.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Requirement Gathering</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,132.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">7</tspan>
+      </text>
+      <text x="0" y="0" width="131" height="19" transform="translate(15,172.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Getting the Approval</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,172.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">2</tspan>
+      </text>
+      <text x="0" y="0" width="197" height="19" transform="translate(5,212.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">+ System Design and Architecture</tspan>
+      </text>
+      <text x="0" y="0" width="197" height="34" transform="translate(15,265)">
+        <tspan x="3" y="14" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Detaild analysis and reqirement</tspan>
+        <tspan x="3" y="29" style="font-family:Arial;font-size:12px;fill:#3e144e;">gathering</tspan>
+      </text>
+      <text x="0" y="0" width="23" height="19" transform="translate(225,272.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">10</tspan>
+      </text>
+      <text x="0" y="0" width="192" height="19" transform="translate(15,332.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Prepare design documentation</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,332.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">5</tspan>
+      </text>
+      <text x="0" y="0" width="108" height="19" transform="translate(5,372.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">+ Implementation</tspan>
+      </text>
+      <text x="0" y="0" width="95" height="19" transform="translate(15,412.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Development</tspan>
+      </text>
+      <text x="0" y="0" width="23" height="19" transform="translate(225,412.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">20</tspan>
+      </text>
+      <text x="0" y="0" width="141" height="19" transform="translate(15,452.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Setting up enviroment</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,452.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">3</tspan>
+      </text>
+      <text x="0" y="0" width="99" height="19" transform="translate(15,492.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Quality testing</tspan>
+      </text>
+      <text x="0" y="0" width="23" height="19" transform="translate(225,492.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">10</tspan>
+      </text>
+      <text x="0" y="0" width="88" height="19" transform="translate(5,532.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">+ Deployment</tspan>
+      </text>
+      <text x="0" y="0" width="115" height="19" transform="translate(15,572.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Setup production</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,572.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">4</tspan>
+      </text>
+      <text x="0" y="0" width="72" height="19" transform="translate(15,612.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Run beta</tspan>
+      </text>
+      <text x="0" y="0" width="23" height="19" transform="translate(225,612.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">20</tspan>
+      </text>
+      <text x="0" y="0" width="69" height="19" transform="translate(15,652.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">- Release</tspan>
+      </text>
+      <text x="0" y="0" width="16" height="19" transform="translate(225,652.5)">
+        <tspan x="3" y="15" style="font-family:Arial;font-size:12px;fill:#3e144e;">2</tspan>
+      </text>
+      <text x="0" y="0" width="65" height="21" transform="translate(261,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">3 Oct 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(262.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(283.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(301.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(323.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(343.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="72" height="21" transform="translate(361,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">10 Oct 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(362.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(383.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(401.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(423.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(443.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="72" height="21" transform="translate(461,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">17 Oct 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(462.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(483.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(501.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(523.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(543.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="72" height="21" transform="translate(561,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">24 Oct 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(562.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(583.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(601.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(623.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(643.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="72" height="21" transform="translate(661,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">31 Oct 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(662.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(683.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(701.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(723.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(743.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="68" height="21" transform="translate(761,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">7 Nov 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(762.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(783.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(801.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(823.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(843.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="75" height="21" transform="translate(861,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">14 Nov 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(862.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(883.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(901.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(923.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(943.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="75" height="21" transform="translate(961,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">21 Nov 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(962.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(983.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1001.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1023.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1043.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="75" height="21" transform="translate(1061,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">28 Nov 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1062.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1083.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1101.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1123.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1143.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="69" height="21" transform="translate(1161,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">5 Dec 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1162.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1183.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1201.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1223.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1243.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="76" height="21" transform="translate(1261,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">12 Dec 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1262.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1283.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1301.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1323.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1343.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="76" height="21" transform="translate(1361,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">19 Dec 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1362.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1383.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1401.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1423.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1443.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="76" height="21" transform="translate(1461,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">26 Dec 2011</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1462.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1483.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1501.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1523.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1543.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="67" height="21" transform="translate(1561,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">2 Jan 2012</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1562.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1583.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1601.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1623.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1643.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="67" height="21" transform="translate(1661,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">9 Jan 2012</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1662.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1683.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1701.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1723.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1743.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+      <text x="0" y="0" width="74" height="21" transform="translate(1761,-0.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">16 Jan 2012</tspan>
+      </text>
+      <text x="0" y="0" width="15" height="21" transform="translate(1762.5,19.5)">
+        <tspan x="4" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">M</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1783.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="17" height="21" transform="translate(1801.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">W</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1823.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">T</tspan>
+      </text>
+      <text x="0" y="0" width="13" height="21" transform="translate(1843.5,19.5)">
+        <tspan x="3" y="16" style="font-family:Arial;font-size:12px;fill:#3e144e;">F</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko11" transform="translate(280,75)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="138" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">7 Days</tspan>
+      </text>
+      <text x="0" y="0" width="36" height="17" transform="translate(50,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">100 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko12" transform="translate(340,115)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="138" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">7 Days</tspan>
+      </text>
+      <text x="0" y="0" width="36" height="17" transform="translate(50,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">100 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko3" transform="translate(480,155)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="58" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="19" width="37.6" height="28.999412536621094" rx="2.5" fill="none" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">3 Days</tspan>
+      </text>
+      <text x="0" y="0" width="30" height="17" transform="translate(2.8,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">66 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko6" transform="translate(520,250)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="198" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="19" width="180" height="28.999412536621094" rx="2.5" fill="none" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="43" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">10 Days</tspan>
+      </text>
+      <text x="0" y="0" width="30" height="17" transform="translate(74,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">91 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko5" transform="translate(620,290)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="98" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="19" width="84" height="28.999412536621094" rx="2.5" fill="none" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">5 Days</tspan>
+      </text>
+      <text x="0" y="0" width="30" height="17" transform="translate(26,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">86 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko9" transform="translate(720,370)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="398" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="19" width="238" height="28.999412536621094" rx="2.5" fill="none" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="43" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">20 Days</tspan>
+      </text>
+      <text x="0" y="0" width="30" height="17" transform="translate(103,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">60 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko2" transform="translate(859.95,410)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="58" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">3 Days</tspan>
+      </text>
+      <text x="0" y="0" width="36" height="17" transform="translate(10,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">100 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko4" transform="translate(979.95,450)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="198" height="28.999412536621094" rx="2.5" fill="#cba9d7" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+        <rect x="1" y="19" width="98" height="28.999412536621094" rx="2.5" fill="none" stroke="#cba9d7" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="43" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">10 Days</tspan>
+      </text>
+      <text x="0" y="0" width="30" height="17" transform="translate(33,26.95)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">50 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko7" transform="translate(1140,530)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="0.75" y="20.75" width="78.5" height="27.374116414200614" rx="2.5" fill="#ffffff" stroke="#f68e54" stroke-width="1.5" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="42" height="19" transform="translate(29,0)">
+        <tspan x="31" y="14" style="font-family:Times;font-size:12px;fill:#000000;">4 Days</tspan>
+      </text>
+      <text x="0" y="0" width="25" height="19" transform="translate(37.5,26.9)">
+        <tspan x="40" y="14" style="font-family:Times;font-size:12px;fill:#000000;">0 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko1" transform="translate(1220,570)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="398" height="28.77716420599517" rx="2.5" fill="#ffffff" stroke="#bc8cbf" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="43" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">20 Days</tspan>
+      </text>
+      <text x="0" y="0" width="24" height="17" transform="translate(0,26.85)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">0 %</tspan>
+      </text>
+    </g>
+  </g>
+  <g id="hndfy4s9-ko8" transform="translate(1620,610)">
+    <desc>root/gantt/dayTask?version=1&amp;author=Cinergix</desc>
+    <g id="image">
+      <g id="graphics">
+        
+        <rect x="1" y="19" width="38" height="28.87072894117766" rx="2.5" fill="#ffffff" stroke="#bc8cbf" stroke-width="2" stroke-dasharray="100,0" stroke-linejoin="round" stroke-linecap="round"></rect>
+      </g>
+      <text x="0" y="0" width="37" height="17" transform="translate(0,0)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">2 Days</tspan>
+      </text>
+      <text x="0" y="0" width="24" height="17" transform="translate(0,26.9)">
+        <tspan x="3" y="12" style="font-family:Arial;font-size:10px;fill:#3e144e;">0 %</tspan>
+      </text>
+    </g>
+  </g>
+<defs></defs></g></svg></div></div></diagram-canvas>
+
+            <indicators-layer><svg class="il-container"><desc>Created with Snap</desc><defs></defs></svg></indicators-layer>
+
+            <app-toolbar _nghost-c1=""><div _ngcontent-c1="" class="tb-container fx-floating fx-fix-bottom">
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-left fx-no-float fx-left fx-span-height">
+        <!---->
+    </div>
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-center fx-center fx-span-height">
+        <toolbar-button btnicon="boson-icon-zoom-in" center="" class="tbb-zoom-in ng-tns-c2-0" tooltiptext="Zoom In" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-in tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-zoom-out" center="" class="tbb-zoom-out ng-tns-c2-1" tooltiptext="Zoom Out" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-out tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-zoom-100" center="" class="tbb-actual-size ng-tns-c2-2" tooltiptext="Actual Size" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-zoom-100 tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><toolbar-button btnicon="boson-icon-fit-to-screen" center="" class="tbb-fit-to-screen ng-tns-c2-3" tooltiptext="Fit To Screen" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-fit-to-screen tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!----><toolbar-button btnicon="boson-icon-full-screen" center="" class="tbb-full-screen ng-tns-c2-4" tooltiptext="Full Screen" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-full-screen tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!---->
+    </div>
+
+    <div _ngcontent-c1="" class="tb-btn-container tb-btn-container-right fx-no-float fx-right fx-span-height">
+        <!----><toolbar-button btnicon="boson-icon-share-thick green" class="tbb-share ng-tns-c2-5" right="" _nghost-c2=""><!---->
+
+<button _ngcontent-c2="" class="tb-button fx-button fx-icon fx-bg-transition">
+    <i _ngcontent-c2="" class="boson-icon-share-thick green tbb-icon"><!----></i>
+    <!---->
+</button></toolbar-button><!---->
+    </div>
+
+</div></app-toolbar>
+        </div> 
+    </div>
+</div>
+
+<!---->
+</std-diagram-viewer>
+                <!----></view-stack>
+    
+</div>
+
+</app-root><script type="text/javascript" src="./inline.5027245262278c335951.bundle.js.download"></script><script type="text/javascript" src="./polyfills.a5df6df2cf72cdef99d2.bundle.js.download"></script><script type="text/javascript" src="./vendor.d801f2c039075b2bb436.bundle.js.download"></script><script type="text/javascript" src="./main.bf0dbf11ec501d857dee.bundle.js.download"></script></body></html>

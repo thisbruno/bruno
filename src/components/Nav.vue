@@ -5,7 +5,7 @@
       <a @click="goToXXX" class="d-flex ml-2">
         <img src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-300.png" height="65px" width="65px">
       </a>
-      <v-toolbar-title>Bruno</v-toolbar-title>
+      <v-toolbar-title>Brunor</v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- <v-toolbar-items class="primary" > -->
         <v-btn flat router to="/skills" class="primary">SKILLs</v-btn>  

@@ -7,7 +7,7 @@
   <!-- <a @click="goToXXX" class="d-flex ml-2"> -->
   <img src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-300.png" height="100%" width="65px">
    <!-- </a> -->
-   <v-toolbar-title>Bruno</v-toolbar-title>
+   <v-toolbar-title>Brunow</v-toolbar-title>
   <v-spacer></v-spacer>
   <!-- <v-toolbar-items class="primary" > -->
    <v-btn flat router to="/skills" class="primary">SKILLs</v-btn>  
@@ -39,7 +39,7 @@ import Nav from '../components/Nav.vue'
       }),
       $(function(){
         $(window).scroll(function(){
-          if($(window).scrollTop() >= 170){
+          if($(window).scrollTop() >= 173){
           $('.thenavbar').slideDown(670)
           }
           else{
@@ -60,7 +60,7 @@ import Nav from '../components/Nav.vue'
           else{
              $('.thenavbar').removeAttr('top')
           $('.thenavbar').attr('top','-3409px')
-          console.log("going down");
+          // console.log("going down");
               $('.thenavbar').addClass('hideNav');                 
           }
            prevScrollpos = currentScrollPos;

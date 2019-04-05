@@ -36,7 +36,9 @@
     background: url("../assets/theback.jpg") no-repeat center;
     background-size: cover;
     width: 100%; height: 100vh;
-    position: relative
+    position: relative;
+    background-attachment: fixed;
+
 }
  #nav .btn2 {
   position: relative;

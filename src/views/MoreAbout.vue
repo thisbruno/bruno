@@ -73,32 +73,28 @@
 		</v-layout>
 
 
-				 <v-layout row wrap  justify-space-around class="mt-5" >
-         <v-flex xs11 sm5  class="mb-2 pb2">
-          <v-card class="cyan lighten-5">
-        <v-flex xs12 class="subheading font-weight-bold py-3 cyan lighten-5 text-xs-center" >
-              contact
+				 <v-layout row wrap  justify-space-between class="mt-5" >
+         <v-flex xs11 sm3  class="mb-2 pb2">
+          <v-card flat height="590" >
+        <v-flex xs12 class="subheading font-weight-bold py-3  text-xs-center" >
+              .
           </v-flex>
-          <v-flex xs12 class="cyan lighten-5" >   
-						<v-layout row wrap  justify-space-around class="mt-4 yellow lighten-4" >
-						 	<v-flex xs2 sm1  class="mb-2 pb2">
+          <v-flex xs12  >   
+						<v-layout row wrap  justify-end class="mt-4 " >
+						 	<v-flex xs4 sm6 class="mb-2 pb2">
 								<v-card flat>
-								<v-flex xs12  class="cyan lighten-5" >  
-									<v-icon left>person</v-icon>  						        
+								<v-flex xs12   >  
+									<!-- <v-icon left>person</v-icon>   -->
+                   <Social class="mt-"></Social>
 								</v-flex>
 							</v-card>
 							</v-flex>
-							<v-flex xs3 sm5  class="mb-2 pb2">
-								<v-card flat>
-								<v-flex xs12  class="cyan lighten-5" >  
-								 Name         
-								</v-flex>
-							</v-card>
-							</v-flex>
-							<v-flex xs6 sm6  class="mb-2 pb2">
+
+							<v-flex xs4 sm4  class="mb-2 pb2">
 								<v-card flat>
 								<v-flex left xs12 class="cyan lighten-5" >             
-				   			 Bruno	
+				   			 
+                 
 								</v-flex>
 							</v-card>
 							</v-flex>
@@ -108,7 +104,7 @@
          </v-card>
         </v-flex>
 
-				<v-flex xs11 sm5  class="mb-2 pb2">
+				<v-flex xs11 sm7  class="mb-2 pb2">
           <v-card flat>
         <v-flex xs12 class="subheading font-weight-bold py-3 cyan lighten-5" >
                Google Api
@@ -140,9 +136,11 @@
 <script>
 // import Nav from '../components/Nav.vue'
 import Footer from '../components/Footer.vue'
+import Social from '../components/Social.vue'
+
   export default {
     components: {
-      Footer ,
+      Footer , Social,
     },
   }
 </script>
